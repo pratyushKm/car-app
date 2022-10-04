@@ -25,6 +25,7 @@ export class ViewDetailsComponent implements OnInit {
     this.viewDetaildata();
     
   }
+  
 
   viewDetaildata(){
  
