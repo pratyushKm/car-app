@@ -1,0 +1,48 @@
+
+
+
+<div class="wrapper fadeInDown" >
+    <div id="formContent" style="background-color: black;">
+      <!-- Tabs Titles  -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <p style="color: wheat;">Login Here</p>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="logindata" (ngSubmit)="loginsubmit()">
+        <input type="text" id="login" class="fadeIn second"  placeholder="User Name" formControlName="username">
+        <input type="text" id="password" class="fadeIn third"  placeholder="password" formControlName="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter" style="background-color: grey;">
+        <a class="underlineHover" href="#">Forgot Password?</a>||
+        <a class="underlineHover" href="javascript:void(0)" routerLink="/signup">Don't have an account?Create Here</a>
+      </div>
+  
+    </div>
+  </div> 
+  
+  <!-- <div class="login-box" style="background-color: black;">
+    <h2>Login</h2>
+    <form [formGroup]="logindata">
+      <div class="user-box">
+        <input type="text" formControlName="username">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" formControlName="password">
+        <label>Password</label>
+      </div>
+      <a href="javascript:void(0)" (click)="loginsubmit()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div> -->

@@ -1,0 +1,47 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+  
+      <h1 class="logo me-auto"><a href="index.html">My Cars</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="/">Home</a></li>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="aboutus">About</a></li>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="service" *ngIf="logoutdisp == true" >Services</a></li>
+          <li class="dropdown"><a href="#"*ngIf="logoutdisp == true"><span><i class='fa fa-user-circle' style='color: white; font-size:20px'></i></span></a>
+            <ul>
+              <li><a href="javascript:void(0)" routerLink="profile" >Profile</a></li>
+              <li><a href="javascript:void(0)" routerLink="dashboard" >Dashboard</a></li>
+              <!-- <li class="dropdown"><a href="javascript:void(0)" routerLink="dashboard">Dashboard</a> -->
+                <!-- <ul> -->
+                  <!-- <li><a href="javascript:void(0)" routerLink="availablecar">Car Available</a></li>
+                  <li><a href="javascript:void(0)" routerLink="clientinfo">Client Details</a></li> -->
+                  <!-- <li><a href="#">Deep Drop Down 3</a></li> -->
+                  <!-- <li><a href="#">Deep Drop Down 4</a></li> -->
+                  <!-- <li><a href="#">Deep Drop Down 5</a></li> -->
+                <!-- </ul> -->
+              <!-- </li> -->
+              <!-- <li><a href="#">Drop Down 2</a></li> -->
+              <!-- <li><a href="#">Drop Down 3</a></li> -->
+              <li><a href="javascript:void(0)" *ngIf="logoutdisp == true" (click)="onclicklogout()">Log Out</a></li>
+              
+            </ul>
+          </li>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="signup" *ngIf="logoutdisp == false">Sign-up</a></li>
+          <!-- <li><a class="nav-link   " href="#portfolio">Portfolio</a></li> -->
+          <!-- <li><a class="nav-link " href="#team">Team</a></li> -->
+
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="contacts" *ngIf="logoutdisp == true">Contact</a></li>
+          
+          <li><a class="getstarted " href="javascript:void(0)" routerLink="login" *ngIf="logoutdisp == false">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+    </div>
+  </header><!-- End Header -->
+  
+ 

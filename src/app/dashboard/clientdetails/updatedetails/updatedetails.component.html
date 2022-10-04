@@ -1,0 +1,101 @@
+<section id="contact" class="contact" style="background-color: black;">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p style="color: wheat;">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga
+                eum
+                quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                sit
+                in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="info">
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>info@example.com</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>+1 5589 55488 55s</p>
+                    </div>
+
+                    <iframe width="500" height="400" frameborder="0"
+                        src="https://www.bing.com/maps/embed?h=400&w=500&cp=20.2703530652297~85.83498084718076&lvl=16.40219033060579&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+                        scrolling="no">
+                    </iframe>
+                </div>
+
+            </div>
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form"
+                    style="background-color: black;color:antiquewhite;" [formGroup]="updatedetails">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">First Name</label>
+                            <input type="text" name="name" class="form-control" id="fname" required
+                                formControlName="firstname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name">Last Name</label>
+                            <input type="text" name="name" class="form-control" id="lname" required
+                                formControlName="lastname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name">Your Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required
+                                formControlName="email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name">Phone Number</label>
+                            <input type="tel" name="phone" class="form-control" id="phone" required
+                                formControlName="phone">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Address</label>
+                        <input type="text" class="form-control" name="subject" id="subject" required
+                            formControlName="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputState">Servicetype</label>
+                        <select multiple id="inputState" class="form-control" (click)="selectvalue($event)">
+                            <option disabled>Choose...</option>
+                            <option *ngFor="let service of Servicetype" value="{{service.value}}">{{service.name}}
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Description</label>
+                        <textarea class="form-control" name="message" rows="10" required
+                            formControlName="description"></textarea>
+                    </div>
+                    <!-- <div class="my-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+      </div> -->
+                    <div class="text-center"><button type="submit" (click)="sendupdateData()">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>

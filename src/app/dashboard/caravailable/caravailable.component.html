@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sl.No</th>
+        <th scope="col">Car Brand</th>
+        <th scope="col">Car Model</th>
+        <th scope="col">Available</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Car issued On</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of availableData ; let i= index">
+        <td>{{i+1}}</td>
+        <td>{{data.Car_brand}}</td>
+        <td>{{data.car_model}}</td>
+        <td [ngClass]="data.available == 'No' ? 'notavailable':'' " >{{data.available}}</td>
+        <td>{{data.contact}}</td>
+        <td>{{data.dateTime}}</td>
+        <td><a class="btn btn-sm text-white btn-primary" [routerLink]="['/viewdetails']" [queryParams]="{ id : data.id}" >View Details</a></td>
+        
+      </tr>
+      
+    </tbody>
+  </table>  

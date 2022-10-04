@@ -1,0 +1,71 @@
+<div>
+    <div class="row">
+      <div class="col-md-3">
+        <h3>Filter your Contact</h3>
+      </div>
+      <div class="col-md-9">
+       
+          <mat-form-field appearance="fill" class="example-form-field" [formGroup]="daterange">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="rangePicker">
+              <input matStartDate placeholder="Start date" formControlName="startDate">
+              <input matEndDate placeholder="End date" formControlName="endDate">
+            </mat-date-range-input>
+            <!-- <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #rangePicker>
+              <mat-date-range-picker-actions>
+                <button mat-button matDateRangePickerCancel>Cancel</button>
+                <button mat-raised-button color="primary" matDateRangePickerApply (click)="onApplydate()">Apply</button>
+              </mat-date-range-picker-actions>
+            </mat-date-range-picker>
+          </mat-form-field>
+          <!-- <button type="submit" (click)="onApplydate()">Apply</button> -->
+        
+      </div>
+    </div>
+  
+  </div>
+  
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Sl.No.</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Nmae</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Description</th>
+        <th scope="col">Service Type</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+  
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of clientData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{data.firstname}}</td>
+        <td>{{data.lastname}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.description}}</td>
+        <td>{{data.servicetype}}</td>
+        <td>{{data.address}}</td>
+        <td>
+          <a href="javascript:void(0)" [routerLink]="['/update/',data.id]"><i class="fas fa-edit"></i></a>||
+  
+          <a href="javascript:void(0)" (click)="deletetabledata(data.id)"><i class='fas fa-trash-alt'></i></a>
+        </td>
+  
+  
+      </tr>
+  
+    </tbody>
+  
+  </table>
+  
+  
+  
+  <!-- Edit Modal -->
