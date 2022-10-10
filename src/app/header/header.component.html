@@ -10,7 +10,10 @@
         <ul>
           <li><a class="nav-link " href="javascript:void(0)" routerLink="/">Home</a></li>
           <li><a class="nav-link " href="javascript:void(0)" routerLink="aboutus">About</a></li>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="task">task</a></li>
           <li><a class="nav-link " href="javascript:void(0)" routerLink="service" *ngIf="logoutdisp == true" >Services</a></li>
+          <li><a class="nav-link " href="javascript:void(0)" routerLink="contacts" *ngIf="logoutdisp == true">Contact</a></li>
+
           <li class="dropdown"><a href="#"*ngIf="logoutdisp == true"><span><i class='fa fa-user-circle' style='color: white; font-size:20px'></i></span></a>
             <ul>
               <li><a href="javascript:void(0)" routerLink="profile" >Profile</a></li>
@@ -34,7 +37,6 @@
           <!-- <li><a class="nav-link   " href="#portfolio">Portfolio</a></li> -->
           <!-- <li><a class="nav-link " href="#team">Team</a></li> -->
 
-          <li><a class="nav-link " href="javascript:void(0)" routerLink="contacts" *ngIf="logoutdisp == true">Contact</a></li>
           
           <li><a class="getstarted " href="javascript:void(0)" routerLink="login" *ngIf="logoutdisp == false">Login</a></li>
         </ul>

@@ -26,6 +26,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RegCheckupComponent } from './service/reg-checkup/reg-checkup.component';
 import { ViewDetailsComponent } from './dashboard/caravailable/view-details/view-details.component';
+import { TaskComponent } from './task/task.component';
+import { ParentComponent } from './task/parent/parent.component';
+import { ChildComponent } from './task/child/child.component';
 
 
 
@@ -46,7 +49,10 @@ import { ViewDetailsComponent } from './dashboard/caravailable/view-details/view
     SignupComponent,
     ContactsComponent,
     RegCheckupComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    TaskComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

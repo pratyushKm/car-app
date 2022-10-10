@@ -30,5 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Git Command for Pushing the latest codes.
 git add .
 git commit -m "Chnages by linga" .
- git pull
- git push
+git pull
+git push
+ 

@@ -11,8 +11,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegCheckupComponent } from './service/reg-checkup/reg-checkup.component';
 import { ServiceComponent } from './service/service.component';
 import { SignupComponent } from './signup/signup.component';
+import { TaskComponent } from './task/task.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,10 @@ const routes: Routes = [
     ]
   },
   { path: 'update/:id', component: UpdatedetailsComponent },
-  { path: 'viewdetails', component: ViewDetailsComponent }
+  { path: 'viewdetails', component: ViewDetailsComponent },
+  { path: 'regularchechkup', component: RegCheckupComponent ,canActivate: [RoutGuard]},
+   { path: 'task', component:TaskComponent},
+
 ];
 
 @NgModule({

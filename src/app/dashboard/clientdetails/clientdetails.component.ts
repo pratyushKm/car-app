@@ -75,9 +75,14 @@ export class ClientdetailsComponent implements OnInit {
     .subscribe((response:any)=>{
       if(response.status == 1){
         this.clientData = response.data;
+
         
       }
+      
     })
+  }
+  noContacts(){
+
   }
 
 
